@@ -1,1 +1,0 @@
-GOOGLE_SHEET_CRED_FILE_PATH = "cred_gscrud.json"

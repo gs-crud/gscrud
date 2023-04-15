@@ -1,10 +1,10 @@
 site_name: GS CRUD
 site_author: Muthu
-copyright: "Copyright &copy; 2022 Muthupandian Thangarajan"
+copyright: "Copyright &copy; 2023 Base Computer"
 site_url: https://gscrud.basecomputer.in
 
 # Repository
-repo_name: gscrud/gs-crud.github.io
+repo_name: gs-crud/gscrud.git
 repo_url: https://github.com/gs-crud/gscrud
 edit_uri: ""
 

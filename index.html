@@ -84,6 +84,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#installation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -232,9 +237,72 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         Home
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-credential-from-google-console" class="md-nav__link">
+    Get credential from google console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-compose-file" class="md-nav__link">
+    docker-compose file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-application" class="md-nav__link">
+    Run the application
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-the-application" class="md-nav__link">
+    Check the application
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -256,7 +324,13 @@
 
 
 
+  <h1>Home</h1>
+
 <p>Hi Welcome to GS CRUD application</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="get-credential-from-google-console">Get credential from google console<a class="headerlink" href="#get-credential-from-google-console" title="Permanent link">&para;</a></h3>
+<p><a href="https://developers.google.com/workspace/guides/create-credentials">https://developers.google.com/workspace/guides/create-credentials</a></p>
+<h3 id="docker-compose-file">docker-compose file<a class="headerlink" href="#docker-compose-file" title="Permanent link">&para;</a></h3>
 <p>Create docker-compose.yaml</p>
 <div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9&quot;</span>
 <span class="nt">services</span><span class="p">:</span>
@@ -271,12 +345,12 @@
 <span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
 </code></pre></div>
-<p>Run
+<h3 id="run-the-application">Run the application<a class="headerlink" href="#run-the-application" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>docker-compose up --build
-</code></pre></div></p>
-<p>Open</p>
-<p><a href="http://localhost">http://localhost</a>
-<a href="http://localhost/docs">http://localhost/docs</a></p>
+</code></pre></div>
+<h3 id="check-the-application">Check the application<a class="headerlink" href="#check-the-application" title="Permanent link">&para;</a></h3>
+<p>API Base URL: <a href="http://localhost">http://localhost</a></p>
+<p>API Documentation: <a href="http://localhost/docs">http://localhost/docs</a></p>
 
 
   

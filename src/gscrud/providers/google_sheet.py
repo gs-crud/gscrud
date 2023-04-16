@@ -94,7 +94,7 @@ class GoogleSheet:
             return list(self.df)
 
     @_return_json
-    def get_all(self):
+    def get_all(self) -> list:
         return self.df
     
     def update(self, column_to_update: str, value_to_update: str, condition_key: str, condition_value: str, condition_opeartor: str = "eq"):

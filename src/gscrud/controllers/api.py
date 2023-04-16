@@ -1,5 +1,11 @@
 from typing import Optional
 from fastapi import APIRouter, Depends,Request, HTTPException, Header
+from gscrud.repositories.sheet_repository import SheetRepository
+from gscrud.usecases.api.get_record import (
+    GetRecordRequest,
+    GetRecordResponse,
+    GetRecordUseCase
+)
 
 # router = APIRouter()
 router = APIRouter(
@@ -29,5 +35,11 @@ async def read_api(
     - **sheet_name**: Name of the sheet
     """
     if authorized:
-        return {"sheet": sheet_name, "id": x_sheet_id}
+        dto = GetRecordRequest()
+        repo = SheetRepository(
+            worksheet_id=x_sheet_id,
+            sheet_name=sheet_name
+        )
+        use_case = GetRecordUseCase(repo)
+        return use_case.execute(dto)
     

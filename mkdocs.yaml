@@ -52,7 +52,7 @@ theme:
   name: material
   custom_dir: docs/overrides
   palette:
-    primary: black
+    primary: purple
     accent: grey
   features:
     - tabs
@@ -64,7 +64,7 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - toc.integrate
+    # - toc.integrate
     - navigation.footer
     # - header.autohide
   feature:

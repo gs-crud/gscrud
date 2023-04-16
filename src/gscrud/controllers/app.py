@@ -1,18 +1,13 @@
 from typing import Union
 
 from fastapi import FastAPI
-from gscrud.controllers import demo
+from src.gscrud.controllers import api
 
 app = FastAPI()
-app.include_router(demo.router)
-
+app.include_router(api.router)
 
 
 @app.get("/")
-def read_root():
-    return {"Hello": "World"}
+def welcome():
+    return "👋 Welcome to GS Crud"
 
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None) -> dict:
-    return {"item_id": item_id, "q": q}

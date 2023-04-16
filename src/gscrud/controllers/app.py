@@ -3,7 +3,7 @@ from typing import Union
 from fastapi import FastAPI
 from src.gscrud.controllers import api
 
-app = FastAPI()
+app = FastAPI(title="GS-CRUD")
 app.include_router(api.router)
 
 

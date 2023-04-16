@@ -129,16 +129,19 @@ class GoogleSheet:
         if operator == "le":
             return self.df[self.df[key] < value]
 
-    def insert_list(self, data, append=True):
+    def insert_list(self, data: List[Any], append: bool=True) -> bool:
         print("Writing list to GSheet")
-        data = {
+        print(data)
+        insert_data = {
+            'majorDimension': "ROWS",
             'values': data
         }
         if append:
             self.service.values().append(spreadsheetId=self.spreadsheet_id,
-                                         body=data,
+                                         body=insert_data,
                                          range=f"{self.sheet_name}!{self.sheet_range}",
                                          valueInputOption='USER_ENTERED').execute()
+        return True
 
 
 if __name__ == "__main__":
@@ -147,9 +150,19 @@ if __name__ == "__main__":
         sheet_id="1KF_GhbanJ186GEuAnrFPxEku5mbrwdcHubuMU5HX3D0",
         sheet_name="students")
     
-    gs.update("result", "pass", "mark", 50, "gr")
-    gs.update("result", "fail", "mark", 50, "le")
-    gs.update("result", "pass", "mark", 50, "eq")
+    # gs.update("result", "pass", "mark", 50, "gr")
+    # gs.update("result", "fail", "mark", 50, "le")
+    # gs.update("result", "pass", "mark", 50, "eq")
+    d = {
+    "stu": 2,
+    "name": "New",
+    "mark": 25,
+    "result": "fail"
+  }
+
+    gs.insert_list(
+    [list(d.values())]
+  )
 
     # print(gs.get_column_names())
     # print(gs.find_value("mark", 11, "gr"))

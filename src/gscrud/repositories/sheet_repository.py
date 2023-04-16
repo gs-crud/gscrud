@@ -1,3 +1,4 @@
+from typing import Dict, Any, List
 from gscrud.providers.google_sheet import GoogleSheet
 
 class SheetRepository:
@@ -10,3 +11,6 @@ class SheetRepository:
 
     def get_record(self):
         return self.provider.get_all()
+    
+    def insert_record(self, record: Dict[str, Any]) -> bool:
+        return self.provider.insert_list(data=[list(record.values())])

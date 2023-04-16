@@ -1,7 +1,7 @@
 FROM python:3.9
 WORKDIR /
 COPY ./src /src
-COPY ./requirements.txt /requirements.txt
+COPY ./requirements_docker.txt /requirements.txt
 COPY ./setup.py /setup.py
 RUN pip install -r /requirements.txt
 RUN pip install -e .

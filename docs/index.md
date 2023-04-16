@@ -1,5 +1,11 @@
 Hi Welcome to GS CRUD application
 
+## Installation
+
+### Get credential from google console
+https://developers.google.com/workspace/guides/create-credentials
+
+### docker-compose file
 Create docker-compose.yaml
 
 ```yaml
@@ -17,12 +23,13 @@ services:
       - "80:80"
 ```    
 
-Run
+### Run the application
 ```
 docker-compose up --build
 ```
 
-Open
+### Check the application
 
-http://localhost
-http://localhost/docs
+API Base URL: http://localhost
+
+API Documentation: http://localhost/docs

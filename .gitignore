@@ -1,6 +1,10 @@
 cred.json
 cred_gscrud.json
 
+node_modules
+package.json
+package-lock.json
+
 .venv
 .venv/*
 
@@ -133,3 +137,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.vercel
